@@ -1,0 +1,25 @@
+.blocks {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.block__double-width {
+  width: 400px;
+}
+
+.block__text {
+  min-height: 75px;
+  white-space: wrap;
+  text-align: center;
+  font-size: 13px;
+}

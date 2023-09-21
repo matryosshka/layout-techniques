@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=1200, initial-scale=1.0">
+   <title>Шпаргалка по частым приемам верстки 😺</title>
+   <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="./styles/main.css">
+   <link href="./styles/prism.css" rel="stylesheet" />
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="maincontent">
+
+         <header class="header">
+            <div class="container header__container">
+               <h1 class="header__text">Шпаргалка по частым приемам верстки 😼</h1>
+            </div>
+         </header>
+
+         <section class="section squares">
+            <div class="container centering__container">
+               <h2 class="header-h2">Центрирование</h2>
+               <ul class="blocks squares__list">
+                  <li class="block square">
+                     <div class="square__out square__absolute">
+                        <div class="square__inner"></div>
+                     </div>
+                     <div class="block__text square__text">Абсолютное позиционирование</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="square__out square__absolute">
+                                 &emsp; &lt;div 
+                                 &emsp; class="square__inner">
+                                 &emsp; &lt;/div>
+                              &lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                           .square__out {
+                              &emsp; position: relative;
+                              &emsp; width: 200px;
+                              &emsp; height: 200px;
+                              &emsp; border: dotted 2px 
+                              &emsp; #000;
+                            }
+                            
+                            .square__inner {
+                              &emsp; width: 50px;
+                              &emsp; height: 50px;
+                              &emsp; background: #000;
+                            }
+                            
+                            .square__absolute .square__inner {
+                              &emsp; position: absolute;
+                              &emsp; top: 0;
+                              &emsp; left: 0;
+                              &emsp; right: 0;
+                              &emsp; bottom: 0;
+                              &emsp; margin: auto;
+                            }
+                     </code></pre>
+                     </div>
+
+                  </li>
+
+                  <li class="block square">
+                     <div class="square__out square__tough">
+                        <div class="square__inner"></div>
+                     </div>
+                     <div class="block__text square__text">Абсолютное позиционирование, жесткое смещение</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="square__out square__tough">
+                                 &emsp; &lt;div 
+                                 &emsp; class="square__inner">
+                                 &emsp; &lt;/div>
+                              &lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                           .square__out {
+                              &emsp; position: relative;
+                              &emsp; width: 200px;
+                              &emsp; height: 200px;
+                              &emsp; border: dotted 2px 
+                              &emsp; #000;
+                            }
+
+                            .square__inner {
+                              &emsp; width: 50px;
+                              &emsp; height: 50px;
+                              &emsp; background: #000;
+                            }
+                            
+                            .square__tough .square__inner {
+                              &emsp; position: absolute;
+                              &emsp; left: 50%;
+                              &emsp; top: 50%;
+                              &emsp; margin-left: -25px;
+                              &emsp; margin-top: -25px;
+                            }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block square">
+                     <div class="square__out square__transform">
+                        <div class="square__inner"></div>
+                     </div>
+                     <div class="block__text square__text">Абсолютное позиционирование, трансформация</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="square__out square__transform">
+                                 &emsp; &lt;div 
+                                 &emsp; class="square__inner">
+                                 &emsp; &lt;/div>
+                              &lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                           .square__out {
+                              &emsp; position: relative;
+                              &emsp; width: 200px;
+                              &emsp; height: 200px;
+                              &emsp; border: dotted 2px 
+                              &emsp; #000;
+                            }
+
+                            .square__inner {
+                              &emsp; width: 50px;
+                              &emsp; height: 50px;
+                              &emsp; background: #000;
+                            }
+                            
+                            .square__transform .square__inner {
+                              &emsp; position: absolute;
+                              &emsp; top: 50%;
+                              &emsp; left: 50%;
+                              &emsp; transform: 
+                              &emsp; translate(-50%, -50%);
+                            }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block square">
+                     <div class="square__out square__flex">
+                        <div class="square__inner"></div>
+                     </div>
+                     <div class="block__text square__text">Flexbox</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="square__out square__flex">
+                                 &emsp; &lt;div 
+                                 &emsp; class="square__inner">
+                                 &emsp; &lt;/div>
+                              &lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                           .square__out {
+                              &emsp; width: 200px;
+                              &emsp; height: 200px;
+                              &emsp; border: dotted 2px 
+                              &emsp; #000;
+                            }
+
+                            .square__inner {
+                              &emsp; width: 50px;
+                              &emsp; height: 50px;
+                              &emsp; background: #000;
+                            }
+                            
+                            .square__flex {
+                              &emsp; display: flex;
+                              &emsp; align-items: center;
+                              &emsp; justify-content: 
+                              &emsp; center;
+                            }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block square">
+                     <div class="square__out square__flex-auto">
+                        <div class="square__inner"></div>
+                     </div>
+                     <div class="block__text square__text">Flexbox, автоматические границы</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="square__out square__flex-auto">
+                                 &emsp; &lt;div 
+                                 &emsp; class="square__inner">
+                                 &emsp; &lt;/div>
+                              &lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                           .square__out {
+                              &emsp; width: 200px;
+                              &emsp; height: 200px;
+                              &emsp; border: dotted 2px 
+                              &emsp; #000;
+                            }
+
+                            .square__inner {
+                              &emsp; width: 50px;
+                              &emsp; height: 50px;
+                              &emsp; background: #000;
+                            }
+                            
+                            .square__flex-auto {
+                              &emsp; display: flex;
+                            }
+
+                            .square__flex-auto .square__inner {
+                              &emsp; margin: auto;
+                            }
+                            
+                     </code></pre>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </section>
+
+         <section class="section geometry">
+            <div class="container shapes__container">
+               <h2 class="header-h2">Фигуры</h2>
+
+               <ul class="blocks shapes">
+                  <li class="block shape">
+                     <div class="shape__elem">
+                        <div class="shape__circle"></div>
+                     </div>
+                     <div class="block__text shape__text">Круг</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="circle">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                           <p>.circle</p> {
+                           &emsp; width: 150px;
+                           &emsp; height: 150px;
+                           &emsp; border-radius: 50%;
+                           &emsp; background: #color;
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block shape">
+                     <div class="shape__elem">
+                        <div class="shape__ellipse"></div>
+                     </div>
+                     <div class="block__text shape__text">Эллипс</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="ellipse">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                           <p>.ellipse</p> {
+                           &emsp; width: 200px;
+                           &emsp; height: 100px;
+                           &emsp; border-radius:
+                           &emsp; 100px/50px;
+                           &emsp; background: #color;
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block shape">
+                     <div class="shape__elem">
+                        <div class="shape__triangle"></div>
+                     </div>
+                     <div class="block__text shape__text">Треугольник</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="triangle">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                        <p>.triangle</p> {
+                           &emsp; width: 200px;
+                           &emsp; height: 100px;
+                           &emsp; border-radius:
+                           &emsp; 100px/50px;
+                           &emsp; background: #color;
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block shape">
+                     <div class="shape__elem">
+                        <div class="shape__trapez"></div>
+                     </div>
+                     <div class="block__text shape__text">Трапеция</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="trapez">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                        <p>.trapez</p> {
+                           &emsp; width: 200px;
+                           &emsp; height: 100px;
+                           &emsp; border-radius:
+                           &emsp; 100px/50px;
+                           &emsp; background: #color;
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block shape">
+                     <div class="shape__elem">
+                        <div class="shape__parall"></div>
+                     </div>
+                     <div class="block__text shape__text">Параллелограмм</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="parall">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                        <p>.parall</p> {
+                           &emsp; width: 200px;<br>
+                           &emsp; height: 120px;<br>
+                           &emsp; background: #9799D3;<br>
+                           &emsp; transform: skewX(-20deg);<br>
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block shape">
+                     <div class="shape__elem">
+                        <div class="shape__triangle-fill"></div>
+                     </div>
+                     <div class="block__text shape__text">Треугольник без заливки</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="triangle-fill">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner code__row language-css">
+                           <p>.triangle-fill</p> {
+                           &emsp; position: relative;
+                           &emsp; width: 0px;
+                           &emsp; height: 0px;
+                           &emsp; border: 60px solid
+                           &emsp; transparent;
+                           &emsp; border-left-color: #9799D3;
+                           &emsp; border-right-width: 0;
+                        }
+                        </code></pre>
+
+                        <pre><code class="code__inner code__row language-css">
+                           <p>.triangle-fill::after</p> {
+                           &emsp; content: "";
+                           &emsp; position: absolute;
+                           &emsp; width: 0px;
+                           &emsp; height: 0px;
+                           &emsp; border: 60px solid
+                           &emsp; transparent;
+                           &emsp; border-left-color: white;
+                           &emsp; border-right-width: 0;
+                           &emsp; top: -60px;
+                           &emsp; left: -70px;
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block shape">
+                     <div class="shape__elem">
+                        <div class="shape__triangle-shadow"></div>
+                     </div>
+                     <div class="block__text shape__text">Треугольник без заливки с тенью</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="triangle-shadow">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner code__row language-css">
+                           <p>.triangle-shadow</p> {
+                           &emsp; position: relative;
+                           &emsp; width: 80px;
+                           &emsp; height: 160px;
+                           &emsp; overflow: hidden;
+                        }
+                        </code></pre>
+
+                        <pre><code class="code__inner code__row language-css">
+                           <p>.triangle-shadow::after</p> {
+                           &emsp; content: "";
+                           &emsp; width: 90px;
+                           &emsp; height: 90px;
+                           &emsp; background: #fff;
+                           &emsp; display: block;
+                           &emsp; transform: rotate(45deg);
+                           &emsp; position: absolute;
+                           &emsp; top: 30px;
+                           &emsp; left: -60px;
+                        }
+                     </code></pre>
+
+                        <pre><code class="code__inner code__row language-css">
+                        <p>.triangle-shadow::before</p> {
+                           &emsp; content: "";
+                           &emsp; width: 90px;
+                           &emsp; height: 90px;
+                           &emsp; background: #9799D3;
+                           &emsp; display: block;
+                           &emsp; transform: rotate(45deg);
+                           &emsp; position: absolute;
+                           &emsp; top: 30px;
+                           &emsp; left: -50px;
+                           &emsp; box-shadow: 0 0 6px #656565;
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+               </ul>
+
+            </div>
+         </section>
+
+         <section class="section gradients">
+            <div class="container gradients__container">
+               <h2 class="header-h2">Градиенты</h2>
+               <ul class="blocks gradients__list">
+                  <li class="block gradient">
+                     <div class="gradient__cover">
+                        <div class="gradient__simple"></div>
+                     </div>
+                     <div class="block__text gradient__text">Простой градиент</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="gradient__simple">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                        <p>.gradient__simple</p> {
+                           &emsp; width: 200px;
+                           &emsp; height: 200px;
+                           &emsp; background-image: 
+                           &emsp; linear-gradient(#2E9AFF, 
+                           &emsp; #F498AD);
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block gradient">
+                     <div class="gradient__cover">
+                        <div class="gradient__left"></div>
+                     </div>
+                     <div class="block__text gradient__text">Справа налево</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="gradient__left">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                        <p>.gradient__left</p> {
+                           &emsp; width: 200px;
+                           &emsp; height: 200px;
+                           &emsp; background-image: 
+                           &emsp; linear-gradient(to left, 
+                           &emsp; #2E9AFF, #F498AD);
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block gradient">
+                     <div class="gradient__cover">
+                        <div class="gradient__top-left"></div>
+                     </div>
+                     <div class="block__text gradient__text">К левому верхнему углу</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="gradient__top-left">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                        <p>.gradient__top-left</p> {
+                           &emsp; width: 200px;
+                           &emsp; height: 200px;
+                           &emsp; background-image: 
+                           &emsp; linear-gradient(to top 
+                           &emsp; left, #2E9AFF, #F498AD);
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block gradient">
+                     <div class="gradient__cover">
+                        <div class="gradient__angle"></div>
+                     </div>
+                     <div class="block__text gradient__text">Угол 27 градусов</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="gradient__angle">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                        <p>.gradient__angle</p> {
+                           &emsp; width: 200px;
+                           &emsp; height: 200px;
+                           &emsp; background-image: 
+                           &emsp; linear-gradient(27deg, 
+                           &emsp; #2E9AFF, #F498AD);
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block gradient">
+                     <div class="gradient__cover">
+                        <div class="gradient__strip"></div>
+                     </div>
+                     <div class="block__text gradient__text">Фон в полоску</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="gradient__strip">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner language-css">
+                        <p>.gradient__strip</p> {
+                           &emsp; width: 200px;
+                           &emsp; height: 200px;
+                           &emsp; background-image: 
+                           &emsp; linear-gradient(90deg, 
+                           &emsp; #2E9AFF 10%, #F498AD 10%, 
+                           &emsp; #F498AD 50%, #9799D3 
+                           &emsp; 50%);
+                           &emsp; background-repeat: 
+                           &emsp; repeat;
+                           &emsp; background-size: 40px 
+                           &emsp; 40px;
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </section>
+
+         <section class="section elements">
+            <div class="container elements__container">
+               <h2 class="header-h2">Элементы</h2>
+
+               <ul class="blocks elements-list">
+                  <li class="block element">
+                     <div class="element__cover">
+                        <div class="element__plus"></div>
+                     </div>
+                     <div class="block__text element__text">Плюс</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="plus">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner code__row language-css">
+                           <p>.plus</p> {
+                              &emsp; position: relative;
+                              &emsp; width: 15px;
+                              &emsp; height: 100px;
+                              &emsp; background: #9799D3;
+                              &emsp; border-radius: 5px;
+                        }
+                        </code></pre>
+
+                        <pre><code class="code__inner code__row language-css">
+                           <p>.plus::after</p> {
+                              &emsp; content: "";
+                              &emsp; display: block;
+                              &emsp; position: absolute;
+                              &emsp; top: 50%;
+                              &emsp; left: 50%;
+                              &emsp; transform: 
+                              &emsp; translate(-50%, -50%);
+                              &emsp; width: 100px;
+                              &emsp; height: 15px;
+                              &emsp; background: #9799D3;
+                              &emsp; border-radius: 5px;
+                        }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block element">
+                     <div class="element__cover">
+                        <div class="element__burger"></div>
+                     </div>
+                     <div class="block__text element__text">Бургер-меню</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="burger">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner code__row language-css">
+                           <p>.burger</p> {
+                              &emsp; position: relative;
+                              &emsp; width: 100px;
+                              &emsp; height: 15px;
+                              &emsp; background: #9799D3;
+                              &emsp; border-radius: 5px;
+                        }
+
+                        <p>.burger::after</p> {
+                           &emsp; top: 100%;
+                           &emsp; margin-top: 15px;
+                        }
+                       <br>
+                        <p>.burger::before</p> {
+                           &emsp; bottom: 100%;
+                           &emsp; margin-bottom: 15px;
+                        }
+                     </code></pre>
+
+                        <pre><code class="code__inner code__row language-css">
+                        <p>.burger::after, .burger::before</p> {
+                           &emsp; content: "";
+                           &emsp; display: block;
+                           &emsp; position: absolute;
+                           &emsp; width: 100px;
+                           &emsp; height: 15px;
+                           &emsp; background: #9799D3;
+                           &emsp; border-radius: 5px;
+                     }
+                     </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block element">
+                     <div class="element__cover">
+                        <div class="element__dotted"></div>
+                     </div>
+                     <div class="block__text element__text">Пунктирная линия</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-html">
+                              &lt;div class="dotted">&lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner code__row language-css">
+                           <p>.dotted</p> {
+                              &emsp; height: 100px;
+                              &emsp; width: 100px;
+                              &emsp; background: linear-gradient 
+                              &emsp; (to right, #9799D3 50%, transparent 50%),
+                              &emsp; linear-gradient 
+                              &emsp; (to right, #9799D3 50%, transparent 50%);
+                              &emsp; background-repeat: repeat-x;
+                              &emsp; background-size: 20px 3px;
+                              &emsp; background-position: left top, left bottom;
+                        }
+                        </code></pre>
+                     </div>
+                  </li>
+
+                  <li class="block element">
+                     <div class="element__cover element__cover-dropdown">
+                        <div class="dropdown">
+                           <a href="#" class="dropdown__link">🤸‍♀️ Наведи-ка</a>
+                           <ul class="dropdown__menu">
+                              <li class="dropdown__item">🎈 Привет</li>
+                              <li class="dropdown__item">🎠 Как</li>
+                              <li class="dropdown__item">🎃 Сам</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="block__text element__text">Выпадающее меню</div>
+
+                     <div class="code">
+                        <pre>
+                           <code class="language-markup">
+                              &lt;div class="dropdown">
+                              &emsp; &lt;a href="#" class="dropdown__link">🤸‍♀️ Наведи-ка&lt;/a>
+                              &emsp; &emsp; &lt;ul class="dropdown__menu">
+                              &emsp; &emsp; &emsp;  &lt;li class="dropdown__item">🎈 Привет&lt;/li>
+                              &emsp; &emsp; &emsp; &lt;li class="dropdown__item">🎠 Как&lt;/li>
+                              &emsp; &emsp; &emsp; &lt;li class="dropdown__item">🎃 Сам&lt;/li>
+                              &emsp; &emsp;  &lt;/ul>
+                           &lt;/div>
+                           </code></pre>
+                     </div>
+
+                     <div class="code">
+                        <pre><code class="code__inner code__row language-css">
+                           .dropdown {
+                              &emsp; position: relative;
+                              &emsp; display: inline-block;
+                            }
+                            
+                            .dropdown__menu {
+                              &emsp; position: absolute;
+                              &emsp; background: transparent;
+                              &emsp; border: dotted 2px black;
+                              &emsp; padding: 10px;
+                              &emsp; width: 200px;
+                              &emsp; top: 100%;
+                              &emsp;  margin-top: 10px;
+                              &emsp; left: -9999px;
+                              &emsp; opacity: 0;
+                              &emsp; transition: opacity .4s;
+                            }
+                           </code></pre>
+
+                        <pre><code class="code__inner code__row language-css">
+                            .dropdown:hover .dropdown__link {
+                              &emsp; color: #808080;
+                            }
+                            
+                            .dropdown:hover .dropdown__menu {
+                              &emsp; left: 0;
+                              &emsp; opacity: 1;
+                            }
+                                                    
+                            .dropdown__menu::before {
+                              &emsp; content: "";
+                              &emsp; display: block;
+                              &emsp; position: absolute;
+                              &emsp; height: 50px;
+                              &emsp; left: 0;
+                              &emsp; right: 0;
+                              &emsp; top: -25px;
+                            }
+                        </code></pre>
+                     </div>
+                  </li>
+
+               </ul>
+
+            </div>
+         </section>
+
+      </div>
+
+      <footer class="footer">
+         <div class="container footer__container">
+            <div class="footer__text">
+               <p>🐈 такие дела</p>
+            </div>
+         </div>
+      </footer>
+
+   </div>
+
+   <script src="./scripts/prism.js"></script>
+</body>
+
+</html>

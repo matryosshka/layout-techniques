@@ -1,0 +1,108 @@
+.shape .code {
+  margin-bottom: 15px;
+}
+
+.shape__elem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.shape__text {
+  min-height: 45px;
+}
+
+.shape__circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #9799D3;
+}
+
+.shape__ellipse {
+  width: 200px;
+  height: 100px;
+  border-radius: 100px/50px;
+  background: #9799D3;
+}
+
+.shape__triangle {
+  width: 0px;
+  height: 0px;
+  border: solid 75px transparent;
+  border-left-color: #9799D3;
+  border-right-width: 0;
+  border-bottom-width: 60px;
+  border-top-width: 60px;
+}
+
+.shape__trapez {
+  width: 170px;
+  height: 0;
+  border-bottom: 120px solid #9799D3;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+}
+
+.shape__parall {
+  width: 200px;
+  height: 120px;
+  background: #9799D3;
+  transform: skewX(-20deg);
+  margin-left: 30px;
+}
+
+.shape__triangle-fill {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  border: 60px solid transparent;
+  border-left-color: #9799D3;
+  border-right-width: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 60px solid transparent;
+    border-left-color: white;
+    border-right-width: 0;
+    top: -60px;
+    left: -70px;
+  }
+}
+
+.shape__triangle-shadow {
+  position: relative;
+  width: 80px;
+  height: 160px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    display: block;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 30px;
+    left: -60px;
+  }
+
+  &::before {
+    content: "";
+    width: 90px;
+    height: 90px;
+    background: #9799D3;
+    display: block;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    box-shadow: 0 0 6px #656565;
+  }
+}

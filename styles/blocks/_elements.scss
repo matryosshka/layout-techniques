@@ -1,0 +1,75 @@
+.element__cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.element__text {
+  min-height: 45px;
+}
+
+.element__plus {
+  position: relative;
+  width: 15px;
+  height: 100px;
+  background: #9799D3;
+  border-radius: 5px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 15px;
+    background: #9799D3;
+    border-radius: 5px;
+  }
+}
+
+.element__burger {
+  position: relative;
+  width: 100px;
+  height: 15px;
+  background: #9799D3;
+  border-radius: 5px;
+}
+
+.element__burger::after, .element__burger::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  background: #9799D3;
+  border-radius: 5px;
+}
+
+.element__burger::after {
+  top: 100%;
+  margin-top: 15px;
+}
+
+.element__burger::before {
+  bottom: 100%;
+  margin-bottom: 15px;
+}
+
+.element__dotted {
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(to right, #9799D3 50%, transparent 50%),
+  linear-gradient(to right, #9799D3 50%, transparent 50%);
+  background-repeat: repeat-x;
+  background-size: 20px 3px;
+  background-position: left top, left bottom;
+}
+
+.element__cover-dropdown {
+  align-items: start;
+  padding-top: 18px;
+}

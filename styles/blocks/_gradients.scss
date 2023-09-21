@@ -1,0 +1,51 @@
+.gradients {
+  background: #e4e2e295;
+}
+
+.gradient {
+  width: 220px;
+  margin-right: 15px;
+}
+
+.gradient__text {
+  min-height: 40px;
+}
+
+.gradient__cover {
+  align-self: center;
+  border: solid 2px black;
+  margin-bottom: 10px;
+}
+
+.gradient__simple {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(#2E9AFF, #F498AD);
+}
+
+.gradient__left {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(to left, #2E9AFF, #F498AD);
+}
+
+.gradient__top-left {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(to top left, #2E9AFF, #F498AD);
+}
+
+.gradient__angle {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(27deg, #2E9AFF, #F498AD);
+}
+
+.gradient__strip{
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(90deg, #2E9AFF 10%, 
+  #F498AD 10%, #F498AD 50%, #9799D3 50%);
+  background-repeat: repeat;
+  background-size: 40px 40px;
+}

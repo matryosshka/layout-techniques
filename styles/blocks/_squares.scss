@@ -1,0 +1,59 @@
+.squares {
+  background: #e4e2e295;
+}
+
+.square {
+  width: 200px;
+}
+
+.square__out {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: dotted 2px black;
+  margin-bottom: 10px;
+}
+
+.square__inner {
+  width: 50px;
+  height: 50px;
+  background-image: linear-gradient(-30deg, #2E9AFF, #F498AD);
+}
+
+.square__absolute .square__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.square__tough .square__inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+.square__transform .square__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.square__flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square__flex-auto {
+  display: flex;
+}
+
+.square__flex-auto .square__inner {
+  margin: auto;
+}
